@@ -1,0 +1,92 @@
+/* Стили для навигационной панели */
+.navbar {
+    z-index: 1000;
+    position: relative;
+}
+
+.navbar-nav {
+    margin-right: 4rem;
+    margin-left: 4rem;
+}
+
+/* Уменьшение отступов для мобильных устройств */
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+.logo {
+    max-width: 64px;
+}
+
+
+/* Стили для hero секции */
+/* Стили для hero секции */
+.hero {
+    position: relative;
+    height: 80vh;
+    background-image: url('img/slide-1.jpeg');
+    background-size: cover; /* Это свойство убедится, что изображение не деформировано */
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    animation: zoom 30s infinite alternate;
+}
+
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+/* Стиль для затемнения */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Анимация zoom */
+@keyframes zoom {
+    0%, 100% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 120%;
+    }
+}
+
+
+#about {
+    padding: 50px 0;
+}
+
+#about img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#services {
+    background-image: url('img/pattern-1.jpg');
+    background-repeat: repeat
+}
