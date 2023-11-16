@@ -1,7 +1,28 @@
+.btn-success {
+    background-color: #E63946;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #F8F9FA;
+    color: #1D3557;
+}
+
+.btn-secondary {
+    background-color: #1D3557;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #F8F9FA;
+    color: #1D3557;
+}
+
 /* Стили для навигационной панели */
 .navbar {
     z-index: 1000;
     position: relative;
+    background-color: #FDFCFF;
 }
 
 .navbar-nav {
@@ -85,8 +106,79 @@
     font-size: 18px;
     line-height: 1.6;
 }
-
 #services {
-    background-image: url('img/pattern-1.jpg');
-    background-repeat: repeat
+    position: relative;
+    height: 80vh;
+    background-image: url('img/pattern-04.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* This will create the parallax effect */
+    overflow: hidden;
+}
+
+#services-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2; /* Ensure the text is above the background */
+}
+
+#services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1; /* This will be above the background but below the text */
+}
+
+/* Portfolio Section Styles */
+
+
+
+#cases h2 {
+    color: #333; /* Dark color for headings */
+    margin-bottom: 30px;
+}
+
+.card {
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: #0056b3; /* Brand color for card header */
+    color: #fff;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    padding: 15px 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.card-body {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+.card-text {
+    color: #555; /* Subtle color for text */
+    line-height: 1.6;
 }
